@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
-require_relative File.expand_path("../../../lib/rails/generators/test_unit/component_generator", __FILE__)
+require_relative File.expand_path("../../../../lib/rails/generators/test_unit/component_generator", __FILE__)
 
 class ViewComponent::TestUnitGeneratorTest < ::Rails::Generators::TestCase
   tests TestUnit::Generators::ComponentGenerator
