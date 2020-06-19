@@ -2,4 +2,12 @@
 Incomplete test coverage
 --------------------------------------------------------------------------------
 
-100% test coverage. You're all set, friend!
+/app/controllers/view_components_controller.rb: 41.67% (missed: 17,18,22,23,24,26,27,28,29,30,31,38,42,43,44,46,47,49,54,55,60)
+/lib/view_component/base.rb: 73.71% (missed: 76,95,96,98,103,108,118,123,128,129,132,133,136,146,162,167,186,206,207,218,222,223,225,230,234,246,274,278,282,283,285,286,291,300,302,303,305,314,324,383,387,397,401,408,410,419)
+/lib/view_component/collection.rb: 30.43% (missed: 6,8,9,11,12,13,14,21,22,23,27,28,30,35,36,38)
+/lib/view_component/engine.rb: 84.0% (missed: 49,50,51,54,55,56,57,58)
+/lib/view_component/render_component_to_string_helper.rb: 75.0% (missed: 6)
+/lib/view_component/rendering_component_helper.rb: 75.0% (missed: 6)
+/test/render_monkey_patch_disabled/app/controllers/integration_examples_controller.rb: 58.33% (missed: 7,11,15,19,23)
+/test/render_monkey_patch_disabled/app/helpers/message_helper.rb: 66.67% (missed: 5)
+/test/render_monkey_patch_disabled/app/lib/primer/state_component.rb: 83.33% (missed: 15)

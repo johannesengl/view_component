@@ -1,4 +1,16 @@
 # frozen_string_literal: true
+require "simplecov"
+require "simplecov-erb"
+
+SimpleCov.start do
+  formatter SimpleCov::Formatter::MultiFormatter.new([
+    SimpleCov::Formatter::ERBFormatter,
+    SimpleCov::Formatter::HTMLFormatter
+  ])
+end
+
+SimpleCov.minimum_coverage 98 # TODO: Get to 100!
+
 require "bundler/setup"
 require "pp"
 require "pathname"
@@ -17,16 +29,4 @@ def with_preview_route(new_value)
   yield
   Rails.application.config.view_component.preview_route = old_value
   app.reloader.reload!
-end
-
-def without_render_monkey_patch
-  begin
-    old_value = Rails.application.config.view_component.render_monkey_patch_enabled
-    Rails.application.config.view_component.render_monkey_patch_enabled = false
-    app.reloader.reload!
-    yield
-  ensure
-    Rails.application.config.view_component.render_monkey_patch_enabled = old_value
-    app.reloader.reload!
-  end
 end
