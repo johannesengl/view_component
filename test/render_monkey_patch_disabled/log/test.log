@@ -1,0 +1,33 @@
+------------------------------------------------------------------------------------------------------------------
+IntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+IntegrationTest: test_renders_component_using_the_render_component_helper
+-------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-19 14:14:47 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 611)
+-------------------------------------------------------------------------
+IntegrationTest: test_renders_component_using_the_render_component_helper
+-------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-19 14:17:55 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 611)
+------------------------------------------------------------------------------------------------------------------
+IntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+IntegrationTest: test_renders_component_using_the_render_component_helper
+-------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-19 14:19:42 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 611)
+------------------------------------------------------------------------------------------------------------------
+IntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+------------------------------------------------------------------------------------------------------------------

@@ -11,6 +11,8 @@ end
 
 SimpleCov.minimum_coverage 98 # TODO: Get to 100!
 
+require "pry"
+
 require "bundler/setup"
 require "pp"
 require "pathname"
@@ -19,7 +21,8 @@ require "minitest/autorun"
 # Configure Rails Envinronment
 ENV["RAILS_ENV"] = "test"
 
-require File.expand_path("../config/environment.rb", __FILE__)
+require File.expand_path("../apps/render_monkey_patch_enabled/config/environment.rb", __FILE__)
+require File.expand_path("../apps/render_monkey_patch_disabled/config/environment.rb", __FILE__)
 require "rails/test_help"
 
 def with_preview_route(new_value)
@@ -29,16 +32,4 @@ def with_preview_route(new_value)
   yield
   Rails.application.config.view_component.preview_route = old_value
   app.reloader.reload!
-end
-
-def without_render_monkey_patch
-  begin
-    old_value = Rails.application.config.view_component.render_monkey_patch_enabled
-    Rails.application.config.view_component.render_monkey_patch_enabled = false
-    app.reloader.reload!
-    yield
-  ensure
-    Rails.application.config.view_component.render_monkey_patch_enabled = old_value
-    app.reloader.reload!
-  end
 end

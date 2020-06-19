@@ -1,0 +1,897 @@
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_renders_component_using_the_render_component_helper
+--------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 11:57:54 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.7ms | Allocations: 112)
+Completed 200 OK in 2ms (Views: 1.6ms | Allocations: 611)
+--------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_renders_component_using_the_render_component_helper
+--------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 12:01:29 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 2ms (Views: 1.1ms | Allocations: 611)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_renders_component_using_the_render_component_helper
+--------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 12:52:10 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.5ms | Allocations: 112)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 611)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_renders_component_using_the_render_component_helper
+--------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 12:53:01 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 611)
+--------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_content_preview
+--------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_content" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component/with_content"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.6ms | Allocations: 248)
+Completed 500 Internal Server Error in 6ms (Allocations: 2099)
+-----------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_tag_helper-generated_content_preview
+-----------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_tag_helper_in_content" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component/with_tag_helper_in_content"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.3ms | Allocations: 149)
+Completed 500 Internal Server Error in 2ms (Allocations: 827)
+-------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_default_preview_ignoring_params
+-------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/default?cta=CTA+from+params" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"cta"=>"CTA from params", "path"=>"preview_component/default"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.3ms | Allocations: 149)
+Completed 500 Internal Server Error in 2ms (Allocations: 828)
+--------------------------------------------------------------------------
+IntegrationTest: test_test_preview_renders_application's_layout_by_default
+--------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/default" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component/default"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.2ms | Allocations: 149)
+Completed 500 Internal Server Error in 2ms (Allocations: 824)
+-------------------------------------------------------------------------------
+IntegrationTest: test_rendering_component_several_times_with_different_variants
+-------------------------------------------------------------------------------
+Started GET "/variants?variant=tablet" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#variants as HTML
+  Parameters: {"variant"=>"tablet"}
+  Rendering integration_examples/variants.html.erb
+  Rendered integration_examples/variants.html.erb (Duration: 0.6ms | Allocations: 231)
+Completed 500 Internal Server Error in 2ms (Allocations: 684)
+-------------------------------------------------------------
+IntegrationTest: test_rendering_component_with_tablet_variant
+-------------------------------------------------------------
+Started GET "/variants?variant=tablet" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#variants as HTML
+  Parameters: {"variant"=>"tablet"}
+  Rendering integration_examples/variants.html.erb
+  Rendered integration_examples/variants.html.erb (Duration: 0.2ms | Allocations: 149)
+Completed 500 Internal Server Error in 1ms (Allocations: 304)
+------------------------------------------------------
+IntegrationTest: test_test_preview_renders_with_layout
+------------------------------------------------------
+Started GET "/rails/view_components/my_component/default" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"my_component/default"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/admin
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/admin (Duration: 0.2ms | Allocations: 148)
+Completed 500 Internal Server Error in 2ms (Allocations: 793)
+------------------------------------------------------------
+IntegrationTest: test_renders_badge_component_closed_preview
+------------------------------------------------------------
+Started GET "/rails/view_components/issues/badge_component/closed" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"issues/badge_component/closed"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+Completed 500 Internal Server Error in 2ms (Allocations: 816)
+---------------------------------------------------------------------------------------------------
+IntegrationTest: test_test_preview_index_of_a_component_renders_rails_application_layout_by_default
+---------------------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/previews.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/previews.html.erb within layouts/application (Duration: 1.5ms | Allocations: 594)
+Completed 200 OK in 4ms (Views: 3.6ms | Allocations: 1487)
+------------------------------------------------------------------------------------
+IntegrationTest: test_test_preview_index_renders_rails_application_layout_by_default
+------------------------------------------------------------------------------------
+Started GET "/rails/view_components" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#index as HTML
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/index.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1307)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 1686)
+---------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_with_default_values
+---------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component/with_params"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.4ms | Allocations: 149)
+Completed 500 Internal Server Error in 3ms (Allocations: 829)
+----------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_cta_preview
+----------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/without_cta" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component/without_cta"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.4ms | Allocations: 149)
+Completed 500 Internal Server Error in 3ms (Allocations: 824)
+---------------------------------------------------
+IntegrationTest: test_rendering_component_in_a_view
+---------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#index as HTML
+  Rendering integration_examples/index.html.erb
+  Rendered integration_examples/index.html.erb (Duration: 1.2ms | Allocations: 260)
+Completed 500 Internal Server Error in 3ms (Allocations: 516)
+------------------------------------------------------------------
+IntegrationTest: test_renders_the_previews_in_the_configured_route
+------------------------------------------------------------------
+Started GET "/previews" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#index as HTML
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/index.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1131)
+Completed 200 OK in 3ms (Views: 2.3ms | Allocations: 1373)
+Started GET "/previews/preview_component/default" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component/default"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+Completed 500 Internal Server Error in 2ms (Allocations: 826)
+------------------------------------------------------
+IntegrationTest: test_rendering_component_with_caching
+------------------------------------------------------
+Started GET "/cached?version=1" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#cached as HTML
+  Parameters: {"version"=>"1"}
+  Rendering integration_examples/cached.html.erb
+  Rendered integration_examples/cached.html.erb (Duration: 0.9ms | Allocations: 240)
+Completed 500 Internal Server Error in 3ms (Allocations: 490)
+-------------------------------------------------------------------------------
+IntegrationTest: test_optional_rendering_component_depending_on_request_context
+-------------------------------------------------------------------------------
+Started GET "/render_check" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#render_check as HTML
+  Rendering integration_examples/render_check.html.erb
+  Rendered integration_examples/render_check.html.erb (Duration: 0.6ms | Allocations: 229)
+Completed 500 Internal Server Error in 2ms (Allocations: 479)
+---------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_default_preview
+---------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/default" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+---------------------------------------------------------
+IntegrationTest: test_rendering_component_without_variant
+---------------------------------------------------------
+Started GET "/variants" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#variants as HTML
+  Rendering integration_examples/variants.html.erb
+  Rendered integration_examples/variants.html.erb (Duration: 0.6ms | Allocations: 149)
+Completed 500 Internal Server Error in 3ms (Allocations: 410)
+---------------------------------------------------------
+IntegrationTest: test_test_preview_renders_without_layout
+---------------------------------------------------------
+Started GET "/rails/view_components/no_layout/default" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+----------------------------------------------------------
+IntegrationTest: test_rendering_component_with_content_for
+----------------------------------------------------------
+Started GET "/content_areas" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#content_areas as HTML
+  Rendering integration_examples/content_areas.html.erb
+  Rendered integration_examples/content_areas.html.erb (Duration: 0.9ms | Allocations: 373)
+Completed 500 Internal Server Error in 2ms (Allocations: 622)
+------------------------------------------------------
+IntegrationTest: test_rendering_component_with_content
+------------------------------------------------------
+Started GET "/content" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#content as HTML
+  Rendering integration_examples/content.html.erb
+  Rendered integration_examples/content.html.erb (Duration: 0.7ms | Allocations: 227)
+Completed 500 Internal Server Error in 2ms (Allocations: 479)
+------------------------------------------
+IntegrationTest: test_test_preview_renders
+------------------------------------------
+Started GET "/rails/view_components/preview_component/default" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+---------------------------------------------------------
+IntegrationTest: test_rendering_component_in_a_controller
+---------------------------------------------------------
+Started GET "/controller_inline_baseline" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#controller_inline_baseline as HTML
+  Rendering integration_examples/_controller_inline.html.erb
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 92)
+Completed 200 OK in 2ms (Views: 1.6ms | Allocations: 361)
+Started GET "/controller_inline" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#controller_inline as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 169)
+--------------------------------------------------------
+IntegrationTest: test_rendering_component_with_a_partial
+--------------------------------------------------------
+Started GET "/partial" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#partial as HTML
+  Rendering integration_examples/partial.html.erb
+  Rendered integration_examples/_test_partial.html.erb (Duration: 0.4ms | Allocations: 77)
+  Rendered integration_examples/partial.html.erb (Duration: 2.4ms | Allocations: 512)
+Completed 500 Internal Server Error in 4ms (Allocations: 761)
+----------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_with_multiple_params
+----------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params?cta=CTA+from+params&title=Title+from+params" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+----------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_with_one_param
+----------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params?cta=CTA+from+params" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+-----------------------------------------------
+IntegrationTest: test_renders_component_preview
+-----------------------------------------------
+Started GET "/rails/view_components/my_component/default" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+----------------------------------------------------------
+IntegrationTest: test_renders_badge_component_open_preview
+----------------------------------------------------------
+Started GET "/rails/view_components/issues/badge_component/open" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+-----------------------------------------------------------------------------
+IntegrationTest: test_test_preview_related_views_are_being_rendered_correctly
+-----------------------------------------------------------------------------
+Started GET "/rails/view_components" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+---------------------------------------------------------------------------------
+IntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+---------------------------------------------------------------------------------
+Started GET "/controller_inline_baseline" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#controller_inline_baseline as HTML
+  Rendering integration_examples/_controller_inline.html.erb
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 140)
+Started GET "/controller_to_string" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#controller_to_string as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 162)
+-----------------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_ignoring_unsupported_params
+-----------------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params?cta=CTA+from+params&label=Label+from+params" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+-----------------------------------------
+IntegrationTest: test_renders_collections
+-----------------------------------------
+Started GET "/products" for 127.0.0.1 at 2020-06-17 12:54:27 +0200
+Processing by IntegrationExamplesController#products as HTML
+  Rendering integration_examples/products.html.erb
+  Rendered integration_examples/products.html.erb (Duration: 0.9ms | Allocations: 277)
+Completed 500 Internal Server Error in 2ms (Allocations: 561)
+---------------------------------------------------------------------------------
+IntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+---------------------------------------------------------------------------------
+Started GET "/controller_inline_baseline" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#controller_inline_baseline as HTML
+  Rendering integration_examples/_controller_inline.html.erb
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 110)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 685)
+Started GET "/controller_to_string" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#controller_to_string as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 170)
+------------------------------------------------------
+IntegrationTest: test_rendering_component_with_content
+------------------------------------------------------
+Started GET "/content" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#content as HTML
+  Rendering integration_examples/content.html.erb
+  Rendered integration_examples/content.html.erb (Duration: 0.6ms | Allocations: 229)
+Completed 500 Internal Server Error in 1ms (Allocations: 481)
+-----------------------------------------------
+IntegrationTest: test_renders_component_preview
+-----------------------------------------------
+Started GET "/rails/view_components/my_component/default" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"my_component/default"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/admin
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/admin (Duration: 0.6ms | Allocations: 226)
+Completed 500 Internal Server Error in 6ms (Allocations: 1891)
+------------------------------------------------------------------
+IntegrationTest: test_renders_the_previews_in_the_configured_route
+------------------------------------------------------------------
+Started GET "/previews" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by ViewComponentsController#index as HTML
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/index.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1338)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2109)
+Started GET "/previews/preview_component/default" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by ViewComponentsController#previews as HTML
+  Parameters: {"path"=>"preview_component/default"}
+  Rendering /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application
+  Rendered /Users/johannesengl/Drive/Job/Aktuell/open-source/view_component/app/views/view_components/preview.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+Completed 500 Internal Server Error in 2ms (Allocations: 828)
+-------------------------------------------------------------------------------
+IntegrationTest: test_rendering_component_several_times_with_different_variants
+-------------------------------------------------------------------------------
+Started GET "/variants?variant=tablet" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#variants as HTML
+  Parameters: {"variant"=>"tablet"}
+  Rendering integration_examples/variants.html.erb
+  Rendered integration_examples/variants.html.erb (Duration: 0.7ms | Allocations: 231)
+Completed 500 Internal Server Error in 2ms (Allocations: 530)
+-----------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_tag_helper-generated_content_preview
+-----------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_tag_helper_in_content" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+-----------------------------------------
+IntegrationTest: test_renders_collections
+-----------------------------------------
+Started GET "/products" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#products as HTML
+  Rendering integration_examples/products.html.erb
+  Rendered integration_examples/products.html.erb (Duration: 0.8ms | Allocations: 274)
+Completed 500 Internal Server Error in 2ms (Allocations: 559)
+---------------------------------------------------------------------------------------------------
+IntegrationTest: test_test_preview_index_of_a_component_renders_rails_application_layout_by_default
+---------------------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+----------------------------------------------------------
+IntegrationTest: test_rendering_component_with_content_for
+----------------------------------------------------------
+Started GET "/content_areas" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#content_areas as HTML
+  Rendering integration_examples/content_areas.html.erb
+  Rendered integration_examples/content_areas.html.erb (Duration: 0.7ms | Allocations: 373)
+Completed 500 Internal Server Error in 1ms (Allocations: 623)
+------------------------------------------------------------
+IntegrationTest: test_renders_badge_component_closed_preview
+------------------------------------------------------------
+Started GET "/rails/view_components/issues/badge_component/closed" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+--------------------------------------------------------
+IntegrationTest: test_rendering_component_with_a_partial
+--------------------------------------------------------
+Started GET "/partial" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#partial as HTML
+  Rendering integration_examples/partial.html.erb
+  Rendered integration_examples/_test_partial.html.erb (Duration: 0.3ms | Allocations: 77)
+  Rendered integration_examples/partial.html.erb (Duration: 1.4ms | Allocations: 512)
+Completed 500 Internal Server Error in 2ms (Allocations: 762)
+---------------------------------------------------------
+IntegrationTest: test_rendering_component_without_variant
+---------------------------------------------------------
+Started GET "/variants" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#variants as HTML
+  Rendering integration_examples/variants.html.erb
+  Rendered integration_examples/variants.html.erb (Duration: 0.2ms | Allocations: 149)
+Completed 500 Internal Server Error in 1ms (Allocations: 410)
+----------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_with_multiple_params
+----------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params?cta=CTA+from+params&title=Title+from+params" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+---------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_with_default_values
+---------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+------------------------------------------
+IntegrationTest: test_test_preview_renders
+------------------------------------------
+Started GET "/rails/view_components/preview_component/default" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+-------------------------------------------------------------
+IntegrationTest: test_rendering_component_with_tablet_variant
+-------------------------------------------------------------
+Started GET "/variants?variant=tablet" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#variants as HTML
+  Parameters: {"variant"=>"tablet"}
+  Rendering integration_examples/variants.html.erb
+  Rendered integration_examples/variants.html.erb (Duration: 0.2ms | Allocations: 149)
+Completed 500 Internal Server Error in 1ms (Allocations: 303)
+--------------------------------------------------------------------------
+IntegrationTest: test_test_preview_renders_application's_layout_by_default
+--------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/default" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+----------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_with_one_param
+----------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params?cta=CTA+from+params" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+------------------------------------------------------
+IntegrationTest: test_rendering_component_with_caching
+------------------------------------------------------
+Started GET "/cached?version=1" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#cached as HTML
+  Parameters: {"version"=>"1"}
+  Rendering integration_examples/cached.html.erb
+  Rendered integration_examples/cached.html.erb (Duration: 0.6ms | Allocations: 240)
+Completed 500 Internal Server Error in 1ms (Allocations: 489)
+---------------------------------------------------
+IntegrationTest: test_rendering_component_in_a_view
+---------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#index as HTML
+  Rendering integration_examples/index.html.erb
+  Rendered integration_examples/index.html.erb (Duration: 0.7ms | Allocations: 260)
+Completed 500 Internal Server Error in 2ms (Allocations: 510)
+-------------------------------------------------------------------------------
+IntegrationTest: test_optional_rendering_component_depending_on_request_context
+-------------------------------------------------------------------------------
+Started GET "/render_check" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#render_check as HTML
+  Rendering integration_examples/render_check.html.erb
+  Rendered integration_examples/render_check.html.erb (Duration: 0.7ms | Allocations: 229)
+Completed 500 Internal Server Error in 2ms (Allocations: 479)
+---------------------------------------------------------
+IntegrationTest: test_test_preview_renders_without_layout
+---------------------------------------------------------
+Started GET "/rails/view_components/no_layout/default" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+---------------------------------------------------------
+IntegrationTest: test_rendering_component_in_a_controller
+---------------------------------------------------------
+Started GET "/controller_inline_baseline" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#controller_inline_baseline as HTML
+  Rendering integration_examples/_controller_inline.html.erb
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 139)
+Started GET "/controller_inline" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+Processing by IntegrationExamplesController#controller_inline as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 168)
+----------------------------------------------------------
+IntegrationTest: test_renders_badge_component_open_preview
+----------------------------------------------------------
+Started GET "/rails/view_components/issues/badge_component/open" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+----------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_cta_preview
+----------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/without_cta" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+------------------------------------------------------------------------------------
+IntegrationTest: test_test_preview_index_renders_rails_application_layout_by_default
+------------------------------------------------------------------------------------
+Started GET "/rails/view_components" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+--------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_content_preview
+--------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_content" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+-------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_default_preview_ignoring_params
+-------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/default?cta=CTA+from+params" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+------------------------------------------------------
+IntegrationTest: test_test_preview_renders_with_layout
+------------------------------------------------------
+Started GET "/rails/view_components/my_component/default" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+-----------------------------------------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_with_params_preview_ignoring_unsupported_params
+-----------------------------------------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/with_params?cta=CTA+from+params&label=Label+from+params" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+-----------------------------------------------------------------------------
+IntegrationTest: test_test_preview_related_views_are_being_rendered_correctly
+-----------------------------------------------------------------------------
+Started GET "/rails/view_components" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+---------------------------------------------------------------
+IntegrationTest: test_renders_preview_component_default_preview
+---------------------------------------------------------------
+Started GET "/rails/view_components/preview_component/default" for 127.0.0.1 at 2020-06-17 12:55:03 +0200
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_component_to_string
+--------------------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string" for 127.0.0.1 at 2020-06-17 14:58:15 +0200
+Processing by IntegrationExamplesController#controller_to_string as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 376)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 14:58:15 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 119)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 411)
+--------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_renders_component_using_the_render_component_helper
+--------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 14:58:15 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 0ms (Views: 0.4ms | Allocations: 170)
+--------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_component_to_string
+--------------------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string" for 127.0.0.1 at 2020-06-17 14:59:01 +0200
+Processing by IntegrationExamplesController#controller_to_string as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 376)
+--------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_renders_component_using_the_render_component_helper
+--------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 14:59:01 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.5ms | Allocations: 119)
+Completed 200 OK in 2ms (Views: 1.1ms | Allocations: 411)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 14:59:01 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 170)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:05:49 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 617)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:05:49 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.6ms | Allocations: 99)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 399)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:07:09 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.9ms | Allocations: 112)
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.1ms | Allocations: 7)
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 22417ms (Allocations: 34272)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:07:31 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.5ms | Allocations: 99)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 397)
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:07:47 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.7ms | Allocations: 112)
+Completed 200 OK in 1702ms (Allocations: 30906)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:07:48 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.6ms | Allocations: 99)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 398)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:08:33 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 2.2ms | Allocations: 112)
+Completed 200 OK in 1201ms (Allocations: 30906)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:10:34 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.5ms | Allocations: 99)
+Completed 200 OK in 2ms (Views: 1.1ms | Allocations: 398)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:10:42 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.9ms | Allocations: 112)
+Completed 200 OK in 1531ms (Allocations: 30916)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:10:43 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.6ms | Allocations: 99)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 398)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:13:44 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.6ms | Allocations: 119)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 618)
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_baseline_render_component" for 127.0.0.1 at 2020-06-17 15:13:44 +0200
+Processing by IntegrationExamplesController#controller_inline_baseline_render_component as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 113)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_baseline_render_component" for 127.0.0.1 at 2020-06-17 15:17:43 +0200
+Processing by IntegrationExamplesController#controller_inline_baseline_render_component as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1641)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:17:43 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.5ms | Allocations: 119)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 433)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:27:48 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 618)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:27:48 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 399)
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:32:57 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 618)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:32:57 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 399)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-17 15:32:57 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 170)
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:34:09 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 618)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:34:09 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 399)
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-17 15:34:09 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 194)
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-17 15:35:25 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 742)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:35:25 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 0ms (Allocations: 104)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:35:25 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 366)
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:35:49 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 618)
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-17 15:35:49 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 227)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:35:49 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.9ms | Allocations: 99)
+Completed 200 OK in 5ms (Views: 2.1ms | Allocations: 366)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:36:40 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 618)
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-17 15:36:40 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 227)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:36:40 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 366)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-17 15:39:50 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.5ms | Allocations: 112)
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 742)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:39:50 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 366)
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:39:50 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 0ms (Allocations: 103)
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-17 15:40:10 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.3ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 617)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-17 15:40:10 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 399)
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-17 15:40:10 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 194)
+-------------------------------------------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_does_not_include_render_monkey_patches_if_render_monkey_patch_enabled_config_is_set_to_false
+-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller
+----------------------------------------------------------------------------------
+Started GET "/controller_inline_render_component" for 127.0.0.1 at 2020-06-19 11:41:49 +0200
+Processing by IntegrationExamplesController#controller_inline_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.5ms | Allocations: 112)
+Completed 200 OK in 2ms (Allocations: 619)
+----------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_using_the_render_component_helper
+----------------------------------------------------------------------------------------------------
+Started GET "/render_component" for 127.0.0.1 at 2020-06-19 11:41:49 +0200
+Processing by IntegrationExamplesController#render_component as HTML
+  Rendering integration_examples/render_component.html.erb
+  Rendered integration_examples/render_component.html.erb (Duration: 0.4ms | Allocations: 99)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 399)
+----------------------------------------------------------------------------------------------------------
+RenderMonkeyPatchDisabledIntegrationTest: test_rendering_component_in_a_controller_using_#render_to_string
+----------------------------------------------------------------------------------------------------------
+Started GET "/controller_to_string_render_component" for 127.0.0.1 at 2020-06-19 11:41:49 +0200
+Processing by IntegrationExamplesController#controller_to_string_render_component as HTML
+  Rendered integration_examples/_controller_inline.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 194)
